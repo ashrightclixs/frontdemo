@@ -1,0 +1,191 @@
+/* ALERT CSS BY ABDUL RAFAY */
+
+.toast_custom {
+    position: absolute;
+    margin-right: 2rem;
+    /* max-width: 256px; */
+    top: 130px;
+    right: 0;
+    padding: 0px;
+    border-radius: 1.5rem;
+    background: #fff;
+    /* padding: 20px 35px 20px 25px; */
+    box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    /* transform: translateX(0%); */
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.toast_custom.active {
+    transform: translateX(0%);
+    padding: 20px 35px 20px 25px;
+}
+
+.toast_custom .toast_custom-content {
+    display: flex;
+    align-items: center;
+}
+
+.toast_custom-content .check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    min-width: 35px;
+    background-color: #13CC26;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.toast_custom-content .warning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    min-width: 35px;
+    background-color: #fcde7e;
+    color: #856404;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.toast_custom-content .danger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    min-width: 35px;
+    background-color: #dc3545;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.toast_custom-content .message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.message .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.message .text.text-1 {
+    font-weight: 600;
+    color: #333;
+}
+
+.message .text.text-2 {
+    inline-size: 300px;
+    overflow-wrap: break-word;
+}
+
+.toast_custom .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.toast_custom .close:hover {
+    opacity: 1;
+}
+
+.toast_custom .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+
+}
+
+.toast_custom .progress:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #13CC26;
+}
+
+.progress.active:before {
+    animation: progress 5s linear forwards;
+}
+
+
+/* Warning */
+
+.toast_custom .warning_progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+
+}
+
+.toast_custom .warning_progress:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fcde7e;
+}
+
+.warning_progress.active:before {
+    animation: progress 5s linear forwards;
+}
+
+
+/* Danger */
+
+.toast_custom .danger_progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+
+}
+
+.toast_custom .danger_progress:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #dc3545;
+}
+
+.danger_progress.active:before {
+    animation: progress 5s linear forwards;
+}
+
+
+@keyframes progress {
+    100% {
+        right: 100%;
+    }
+}
+
+/* ALERT CSS END */
+
+@media (min-width: 320px) and (max-width:575px) {
+    .toast_custom{
+        margin-right: 1rem;
+        max-width: 288px;
+        top: 120px;
+    }
+}
